@@ -19,6 +19,7 @@ export const NAV_LINKS = [
   { label: "Lawyers", href: "/lawyers" },
   { label: "Blogs", href: "/blogs" },
   { label: "About", href: "/about" },
+   { label: "Cities", href: "/cities" },
   { label: "Contact", href: "/contact" },
 ];
 

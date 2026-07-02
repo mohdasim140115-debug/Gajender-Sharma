@@ -5,9 +5,14 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 import { cities, cityServices } from "@/data/cities";
 
-export default function Cities() {
+export const metadata = {
+  title: "All Cities",
+};
+
+export default function Cities({ showAll = false }) {
   const primary = cityServices[0]; // Property Lawyer landing per city
 
+  const visibleCities = showAll ? cities : cities.slice(0, 17);
   return (
     <section className="bg-white py-20 sm:py-24">
       <Container>
@@ -17,8 +22,8 @@ export default function Cities() {
           subtitle="We connect you with local, verified advocates across India's major cities — with more added every week."
         />
 
-        <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-          {cities.map((city, i) => (
+        <div className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          {visibleCities.map((city, i) => (
             <Reveal key={city.slug} delay={i * 0.03}>
               <Link
                 href={`/${primary.slug}/${city.slug}`}
@@ -30,7 +35,9 @@ export default function Cities() {
                     <span className="block font-semibold text-ink-900">
                       {city.name}
                     </span>
-                    <span className="block text-xs text-ink-400">{city.state}</span>
+                    <span className="block text-xs text-ink-400">
+                      {city.state}
+                    </span>
                   </span>
                 </span>
                 <ArrowUpRight className="h-4 w-4 text-ink-300 transition group-hover:text-gold-600" />
@@ -38,6 +45,17 @@ export default function Cities() {
             </Reveal>
           ))}
         </div>
+
+        {!showAll && (
+          <div className="mt-12 flex justify-center">
+            <Link
+              href="/cities"
+              className="rounded-xl bg-gold-500 px-8 py-3 font-semibold text-white transition hover:bg-gold-600"
+            >
+              View All Cities →
+            </Link>
+          </div>
+        )}
       </Container>
     </section>
   );
