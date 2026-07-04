@@ -76,7 +76,7 @@ export default async function CityServicePage({ params }) {
                 understand local courts and procedures — so your matter is handled with
                 clarity and care. {area?.overview}
               </p>
-            </Reveal>
+            </Reveal>   
 
             {area && (
               <Reveal className="mt-10">

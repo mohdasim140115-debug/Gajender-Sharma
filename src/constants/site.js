@@ -6,7 +6,7 @@ export const SITE = {
   tagline: "India's Trusted Legal Consultation Platform",
   description:
     "Connect with verified, top-rated advocates across India. Book confidential legal consultations for property, family, criminal, corporate and 15+ Legal Services.",
-  url: "https://lexadvocate.example.com",
+  url: "https://advocategajendersharma.com",
   phone: "+91 97281 09109",
   email: "adv.g.sharma15@gmail.com",
   address: " Chamber No. 424, Judicial Court Complex, Haily Mandi Road, Pataudi, Haryana 122503",
