@@ -77,7 +77,7 @@ export default function Hero() {
             >
               Connect with verified advocates for property, family, criminal,
               corporate and 15+ practice areas. Confidential consultations —
-              fast, secure and affordable.
+              fast, secure and .
             </motion.p>
 
             <motion.form
@@ -170,7 +170,7 @@ export default function Hero() {
             </div>
           </motion.div>
         </div>
-        
+
 
         {/* Stat strip */}
         <motion.div
